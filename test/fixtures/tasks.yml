@@ -1,4 +1,4 @@
-task1:
+Task1:
   title: "task1"
   state: false
   due_date: "2023-03-09"
@@ -6,7 +6,7 @@ task1:
   memo: "なるはや"
   user: michael
 
-task2:
+Task2:
   title: "task2"
   state: false
   due_date: "2023-04-13"
@@ -14,7 +14,7 @@ task2:
   memo: ""
   user: michael
 
-task3:
+Task3:
   title: "task3"
   state: true
   due_date: "2023-01-23"
@@ -29,3 +29,13 @@ most_urgent:
   priority: "☆☆☆☆☆"
   memo: "緊急"
   user: michael
+
+<% 30.times do |n| %>
+task_<%= n %>:
+  title: <%= Faker::Lorem.sentence(word_count: 1) %>
+  state: true
+  due_date: <%= Faker::Date.between(from: '2021-04-01', to: '2024-03-31') %>
+  priority: "☆☆☆☆☆"
+  memo: <%= Faker::Lorem.sentence(word_count: 5) %>
+  user: michael
+<% end %>
