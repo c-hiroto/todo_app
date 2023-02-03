@@ -1,0 +1,31 @@
+task1:
+  title: "task1"
+  state: false
+  due_date: "2023-03-09"
+  priority: "☆☆☆☆☆"
+  memo: "なるはや"
+  user: michael
+
+task2:
+  title: "task2"
+  state: false
+  due_date: "2023-04-13"
+  priority: "☆"
+  memo: ""
+  user: michael
+
+task3:
+  title: "task3"
+  state: true
+  due_date: "2023-01-23"
+  priority: "☆☆"
+  memo: ""
+  user: michael
+
+most_urgent:
+  title: "most urgent task"
+  state: false
+  due_date: "2023-03-0"
+  priority: "☆☆☆☆☆"
+  memo: "緊急"
+  user: michael
