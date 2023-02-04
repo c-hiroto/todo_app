@@ -25,7 +25,7 @@ Task3:
 most_urgent:
   title: "most urgent task"
   state: false
-  due_date: "2023-03-0"
+  due_date: "2023-03-03"
   priority: "☆☆☆☆☆"
   memo: "緊急"
   user: michael
@@ -39,3 +39,27 @@ task_<%= n %>:
   memo: <%= Faker::Lorem.sentence(word_count: 5) %>
   user: michael
 <% end %>
+
+Task4:
+  title: "task4"
+  state: false
+  due_date: "2023-03-0"
+  priority: "☆☆☆☆☆"
+  memo: ""
+  user: archer
+
+Task5:
+  title: "task5"
+  state: false
+  due_date: "2023-03-0"
+  priority: "☆☆☆☆☆"
+  memo: ""
+  user: archer
+
+Task6:
+  title: "task6"
+  state: false
+  due_date: "2023-03-0"
+  priority: "☆☆☆☆☆"
+  memo: ""
+  user: lana 

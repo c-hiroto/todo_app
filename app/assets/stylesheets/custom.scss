@@ -229,3 +229,22 @@ input, textarea, select, .uneditable-input {
       margin-bottom: 5px;
     }
   }
+
+    /* pagination */
+.pagination {
+    li {
+        a {
+          border: none;
+          color: #696969;
+          &:hover {
+            border-radius: 15px;
+          }
+        }
+    }
+    .active {
+        a {
+          background: #000; 
+          border-radius: 15px;
+        }
+    }
+  }

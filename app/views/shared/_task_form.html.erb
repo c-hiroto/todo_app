@@ -1,0 +1,17 @@
+<%= form_with(model: @task) do |f| %>
+    <%= render 'shared/error_messages', object: f.object %>
+    <div class="field">
+      <%= f.text_field :title, placeholder: "What's new task?" %>
+    </div>
+    <div>
+    <%= f.select :priority, [["☆", "☆"], ["☆☆", "☆☆"], ["☆☆☆", "☆☆☆"], ["☆☆☆☆", "☆☆☆☆"], ["☆☆☆☆☆", "☆☆☆☆☆"]], prompt: "Priority (Required)" %>
+    </div>
+    <div>
+    <%= f.date_select :due_date %>
+    </div>
+    <div>
+    <%= f.text_area :memo, placeholder: "Memo (Optional)"%>
+    </div>
+
+    <%= f.submit "Create Task", class: "btn btn-primary" %>
+  <% end %>
