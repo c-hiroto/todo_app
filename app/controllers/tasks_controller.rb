@@ -22,6 +22,18 @@ class TasksController < ApplicationController
           redirect_to request.referrer, status: :see_other
         end
     end
+
+    def done
+        @task = Task.find(params[:id])
+        @task.update(state: true)
+        redirect_to root_path, status: :see_other
+    end
+
+    def undone
+        @task = Task.find(params[:id])
+        @task.update(state: false)
+        redirect_to user_path
+    end
     
     private
     

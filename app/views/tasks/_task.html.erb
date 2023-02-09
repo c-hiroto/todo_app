@@ -1,5 +1,9 @@
 <li id="task-<%= task.id %>">
-  #state changing button
+  <% if task.state == false %>
+    <%= button_to "Done", done_path(task), method: :post %>
+  <% else %>
+    <%= button_to "Undone", undone_path(task), method: :post %>
+  <% end %>
   <span class="title"><%= task.title %></span>
   <span class="due_date">Due Date: <%= task.due_date %></span>
   <span class="priority">Prioriy: <%= task.priority %></span>
