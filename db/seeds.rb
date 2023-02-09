@@ -11,3 +11,11 @@ user = User.first
     memo = Faker::Lorem.sentence(word_count: 3)
     user.tasks.create!(title: title, state: true, due_date: date, priority: "☆☆☆", memo: memo)
 end
+
+Tag.create([
+    { name: "大学"},
+    { name: "IT"},
+    { name: "教養"},
+    { name: "語学"},
+    { name: "その他"}
+])

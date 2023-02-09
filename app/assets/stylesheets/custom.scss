@@ -188,6 +188,12 @@ input, textarea, select, .uneditable-input {
       font-weight: normal;
     }
   }
+
+  .check_box {
+    text-align: center;
+  }
+
+
   
   #session_remember_me {
     width: auto;
@@ -219,8 +225,11 @@ input, textarea, select, .uneditable-input {
     }
     .memo {
       display: block;
-      margin-left: 10px;
+      margin-left: 20px;
     }
+    .tags {
+        margin-left: 20px;
+      }
   }
   
   aside {

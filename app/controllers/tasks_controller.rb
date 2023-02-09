@@ -26,7 +26,7 @@ class TasksController < ApplicationController
     private
     
         def task_params
-          params.require(:task).permit(:title, :state, :due_date, :priority, :memo)
+          params.require(:task).permit(:title, :state, :due_date, :priority, :memo, tag_ids: [])
         end
 
         def correct_user

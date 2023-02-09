@@ -5,4 +5,6 @@ class Task < ApplicationRecord
   validates :due_date, presence: true
   validates :priority, presence: true
   validates :memo, length: { maximum: 140 }
+  has_many :tag_relationships, dependent: :destroy
+  has_many :tags, through: :tag_relationships, dependent: :destroy
 end

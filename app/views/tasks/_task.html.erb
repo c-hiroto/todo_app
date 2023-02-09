@@ -1,11 +1,18 @@
 <li id="task-<%= task.id %>">
+  #state changing button
   <span class="title"><%= task.title %></span>
   <span class="due_date">Due Date: <%= task.due_date %></span>
   <span class="priority">Prioriy: <%= task.priority %></span>
   <span class="memo"><%= task.memo %></span>
+  <span class="tags">
+    <% task.tags.each do |tag| %>
+      #<%= tag.name %>
+    <% end %>
+  </span>
+  <span class="btn">
   <% if current_user?(task.user) %>
-      <%= link_to "delete", task, data: { "turbo-method": :delete,
+      <%= link_to "Delete this Task", task, data: { "turbo-method": :delete,
                                                turbo_confirm: "You sure?" } %>
   <% end %>
-  #state changing button
+  </span>
 </li>
