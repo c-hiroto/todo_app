@@ -2,7 +2,7 @@ class StaticPagesController < ApplicationController
   def home
     if logged_in?
       @task = current_user.tasks.build
-      @feed_items = current_user.tasks.where(state: false)
+      @feed_items = params[:tag_id].present? ? Tag.find(params[:tag_id]).tasks.where(state: false) : Task.all.where(state: false)
     end
   end
 
