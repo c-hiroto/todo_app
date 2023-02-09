@@ -18,6 +18,8 @@ class UsersProfileTest < ActionDispatch::IntegrationTest
     assert_select 'div.pagination'
     @user.tasks.where(state: true).paginate(page: 1).each do |task|
       assert_match task.title, response.body
+      assert_match "Undone", response.body
+      assert_match "Delete this Task", response.body
     end
   end
 end
