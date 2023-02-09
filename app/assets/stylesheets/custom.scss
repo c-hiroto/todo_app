@@ -219,16 +219,18 @@ input, textarea, select, .uneditable-input {
       margin-top: 5em;
       padding-top: 0;
       font-size: 20px;
+      text-align: center;
     }
     .due_date {
       padding: 0 10px;
     }
     .memo {
       display: block;
-      margin-left: 20px;
+      margin-left: 76px;
+      margin-bottom: 5px;
     }
     .tags {
-        margin-left: 20px;
+        margin-left: 76px;
       }
   }
   

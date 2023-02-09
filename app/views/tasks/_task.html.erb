@@ -1,22 +1,25 @@
 <li id="task-<%= task.id %>">
-  <% if task.state == false %>
-    <%= button_to "Done", done_path(task), method: :post %>
-  <% else %>
-    <%= button_to "Undone", undone_path(task), method: :post %>
-  <% end %>
+  <span class="btn">
+    <% if task.state == false %>
+      <%= button_to "Done", done_path(task), method: :post %>
+    <% else %>
+      <%= button_to "Undone", undone_path(task), method: :post %>
+    <% end %>
+  </span>
   <span class="title"><%= task.title %></span>
   <span class="due_date">Due Date: <%= task.due_date %></span>
   <span class="priority">Prioriy: <%= task.priority %></span>
-  <span class="memo"><%= task.memo %></span>
-  <span class="tags">
-    <% task.tags.each do |tag| %>
-      #<%= tag.name %>
-    <% end %>
-  </span>
   <span class="btn">
   <% if current_user?(task.user) %>
       <%= link_to "Delete this Task", task, data: { "turbo-method": :delete,
                                                turbo_confirm: "You sure?" } %>
   <% end %>
   </span>
+  <span class="memo"><%= task.memo %></span>
+  <span class="tags">
+    <% task.tags.each do |tag| %>
+      #<%= tag.name %>
+    <% end %>
+  </span>
+  
 </li>
