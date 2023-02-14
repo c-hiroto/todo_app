@@ -9,5 +9,5 @@ user = User.first
     title = Faker::Lorem.sentence(word_count: 1)
     date = Faker::Date.between(from: '2021-04-01', to: '2024-03-31')
     memo = Faker::Lorem.sentence(word_count: 3)
-    user.tasks.create!(title: title, state: true, due_date: date, priority: "☆☆☆", memo: memo)
+    user.tasks.create!(title: title, is_done: true, due_date: date, priority: 3, memo: memo)
 end

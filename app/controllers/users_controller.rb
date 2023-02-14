@@ -6,7 +6,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @tasks = @user.tasks.where(state: true).paginate(page: params[:page])
+    @tasks = @user.tasks.where(is_done: true).paginate(page: params[:page])
   end
 
   def new

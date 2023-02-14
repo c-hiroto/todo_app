@@ -1,7 +1,7 @@
 <li id="task-<%= task.id %>">
   <span class="title"><%= task.title %></span>
   <span class="due_date">Due Date: <%= task.due_date %></span>
-  <span class="priority">Prioriy: <%= task.priority %></span>
+  <span class="priority">Prioriy: <%="☆" * task.priority %></span>
   <span class="memo"><%= task.memo %></span>
   <% if current_user?(task.user) %>
       <%= link_to "delete", task, data: { "turbo-method": :delete,
