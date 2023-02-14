@@ -4,7 +4,7 @@ class TaskTest < ActiveSupport::TestCase
 
   def setup
     @user = users(:michael)
-    @task = @user.tasks.build(title: "task1", is_done: false, due_date: "2023-02-09", priority: "☆☆☆☆☆", memo: "なるはや")
+    @task = @user.tasks.build(title: "task1", is_done: false, due_date: "2023-02-09", priority: 4, memo: "なるはや")
   end
 
   test "should be valid" do
