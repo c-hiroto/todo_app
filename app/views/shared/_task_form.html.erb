@@ -4,7 +4,7 @@
       <%= f.text_field :title, placeholder: "What's new task?" %>
     </div>
     <div>
-    <%= f.select :priority, [["☆", "☆"], ["☆☆", "☆☆"], ["☆☆☆", "☆☆☆"], ["☆☆☆☆", "☆☆☆☆"], ["☆☆☆☆☆", "☆☆☆☆☆"]], prompt: "Priority (Required)" %>
+    <%= f.select :priority, [["☆", 1], ["☆☆", 2], ["☆☆☆", 3], ["☆☆☆☆", 4], ["☆☆☆☆☆", 5]], prompt: "Priority (Required)" %>
     </div>
     <div>
     <%= f.date_select :due_date %>

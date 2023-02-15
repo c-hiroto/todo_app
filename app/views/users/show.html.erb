@@ -13,7 +13,7 @@
   </aside>
   <div class="col-md-8">
     <% if @user.tasks.any? %>
-      <h3>Completed Tasks (<%= @user.tasks.where(state: true).count %>)</h3>
+      <h3>Completed Tasks (<%= @user.tasks.where(is_done: true).count %>)</h3>
       <%= form_tag user_path, method: :get do %>
         <%= select_tag :tag_id,
                        options_from_collection_for_select(Tag.all, :id, :name, params[:tag_id]),

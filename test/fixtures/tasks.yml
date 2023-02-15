@@ -1,65 +1,65 @@
 Task1:
   title: "task1"
-  state: false
+  is_done: false
   due_date: "2023-03-09"
-  priority: "☆☆☆☆☆"
+  priority: 5
   memo: "なるはや"
   user: michael
 
 Task2:
   title: "task2"
-  state: false
+  is_done: false
   due_date: "2023-04-13"
-  priority: "☆"
+  priority: 1
   memo: ""
   user: michael
 
 Task3:
   title: "task3"
-  state: true
+  is_done: true
   due_date: "2023-01-23"
-  priority: "☆☆"
+  priority: 2
   memo: ""
   user: michael
 
 most_urgent:
   title: "most urgent task"
-  state: false
+  is_done: false
   due_date: "2023-03-03"
-  priority: "☆☆☆☆☆"
+  priority: 5
   memo: "緊急"
   user: michael
 
 <% 30.times do |n| %>
 task_<%= n %>:
   title: <%= Faker::Lorem.sentence(word_count: 1) %>
-  state: true
+  is_done: true
   due_date: <%= Faker::Date.between(from: '2021-04-01', to: '2024-03-31') %>
-  priority: "☆☆☆☆☆"
+  priority: 5
   memo: <%= Faker::Lorem.sentence(word_count: 5) %>
   user: michael
 <% end %>
 
 Task4:
   title: "task4"
-  state: false
+  is_done: false
   due_date: "2023-03-0"
-  priority: "☆☆☆☆☆"
+  priority: 5
   memo: ""
   user: archer
 
 Task5:
   title: "task5"
-  state: false
+  is_done: false
   due_date: "2023-03-0"
-  priority: "☆☆☆☆☆"
+  priority: 5
   memo: ""
   user: archer
 
 Task6:
   title: "task6"
-  state: false
+  is_done: false
   due_date: "2023-03-0"
-  priority: "☆☆☆☆☆"
+  priority: 5
   memo: ""
   user: lana 

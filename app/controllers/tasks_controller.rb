@@ -8,7 +8,7 @@ class TasksController < ApplicationController
         flash[:success] = "Task created!"
         redirect_to root_url
       else
-        @feed_items = current_user.tasks.where(state: false)
+        @feed_items = current_user.tasks.where(is_done: false)
         render 'static_pages/home', status: :unprocessable_entity
       end
     end
@@ -38,7 +38,7 @@ class TasksController < ApplicationController
     private
     
         def task_params
-          params.require(:task).permit(:title, :state, :due_date, :priority, :memo, tag_ids: [])
+          params.require(:task).permit(:title, :is_done, :due_date, :priority, :memo, tag_ids: [])
         end
 
         def correct_user
