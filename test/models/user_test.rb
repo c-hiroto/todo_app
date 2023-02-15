@@ -68,4 +68,12 @@ class UserTest < ActiveSupport::TestCase
   test "authenticated? should return false for a user with nil digest" do
     assert_not @user.authenticated?('')
   end
+
+  test "associated tasks should be destroyed" do
+    @user.save
+    @user.tasks.create!(title: "task1", is_done: false, due_date: "2023-02-09", priority: 5, memo: "なるはや")
+    assert_difference 'Task.count', -1 do
+      @user.destroy
+    end
+  end
 end

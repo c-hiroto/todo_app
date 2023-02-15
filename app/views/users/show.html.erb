@@ -11,4 +11,13 @@
         <% end %>
     </section>
   </aside>
+  <div class="col-md-8">
+    <% if @user.tasks.any? %>
+      <h3>Completed Tasks (<%= @user.tasks.where(is_done: true).count %>)</h3>
+      <ol class="tasks">
+        <%= render @tasks %>
+      </ol>
+      <%= will_paginate @tasks %>
+    <% end %>
+  </div>
 </div>

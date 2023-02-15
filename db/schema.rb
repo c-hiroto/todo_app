@@ -10,7 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_02_02_095214) do
+ActiveRecord::Schema[7.0].define(version: 2023_02_14_022836) do
+  create_table "tasks", force: :cascade do |t|
+    t.string "title"
+    t.integer "user_id", null: false
+    t.boolean "is_done", default: false
+    t.integer "priority"
+    t.text "memo"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.date "due_date"
+    t.index ["user_id"], name: "index_tasks_on_user_id"
+    t.index ["user_id"], name: "index_tasks_on_user_id_and_due_date"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "email"
@@ -22,4 +35,5 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_02_095214) do
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
+  add_foreign_key "tasks", "users"
 end

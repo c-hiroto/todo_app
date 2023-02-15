@@ -199,3 +199,52 @@ input, textarea, select, .uneditable-input {
 .dropdown-menu.active {
     display: block;
   }
+
+  /* tasks */
+
+.tasks {
+    list-style: none;
+    padding: 0;
+    li {
+      padding: 10px 0;
+      border-top: 1px solid #e8e8e8;
+    }
+    .title {
+      margin-top: 5em;
+      padding-top: 0;
+      font-size: 20px;
+    }
+    .due_date {
+      padding: 0 10px;
+    }
+    .memo {
+      display: block;
+      margin-left: 10px;
+    }
+  }
+  
+  aside {
+    textarea {
+      height: 100px;
+      margin-bottom: 5px;
+    }
+  }
+
+    /* pagination */
+.pagination {
+    li {
+        a {
+          border: none;
+          color: #696969;
+          &:hover {
+            border-radius: 15px;
+          }
+        }
+    }
+    .active {
+        a {
+          background: #000; 
+          border-radius: 15px;
+        }
+    }
+  }
