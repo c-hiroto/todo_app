@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_02_09_064108) do
+ActiveRecord::Schema[7.0].define(version: 2023_02_14_022836) do
   create_table "tag_relationships", force: :cascade do |t|
     t.integer "task_id", null: false
     t.integer "tag_id", null: false
