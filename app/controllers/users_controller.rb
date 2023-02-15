@@ -6,7 +6,6 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-<<<<<<< HEAD
     @tasks = params[:tag_id].present? ? Tag.find(params[:tag_id]).tasks.where(is_done: true).paginate(page: params[:page]) : @user.tasks.where(is_done: true).paginate(page: params[:page])
   end
 
