@@ -8,4 +8,6 @@ Rails.application.routes.draw do
   delete  "/logout",  to: "sessions#destroy"
   resources :users
   resources :tasks, only: [:create, :destroy]
+  post "/tasks/:id/done", to: "tasks#done", as: 'done'
+  post "/tasks/:id/undone", to: "tasks#undone", as: 'undone'
 end

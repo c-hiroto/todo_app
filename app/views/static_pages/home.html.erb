@@ -10,6 +10,15 @@
     </aside>
     <div class="col-md-8">
       <h3>Upcoming Tasks</h3>
+      <%= form_tag root_path, method: :get do %>
+        <%= select_tag :tag_id,
+                       options_from_collection_for_select(Tag.all, :id, :name, params[:tag_id]),
+                       {
+                         prompt: 'Filter',
+                         onchange: 'submit(this.form);'
+                       }
+        %>
+      <% end %>
       <%= render 'shared/feed' %>
     </div>
   </div>

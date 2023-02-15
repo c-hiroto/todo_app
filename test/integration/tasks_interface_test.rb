@@ -28,7 +28,7 @@ class TasksInterfaceTest < TasksInterface
 
   test "should have task delete links on own profile page" do
     get user_path(@user)
-    assert_select 'a', text: 'delete'
+    assert_select 'a', text: 'Delete this Task'
   end
 
   test "should be able to delete own task" do
