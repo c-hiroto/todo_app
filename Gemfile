@@ -2,6 +2,9 @@ source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 gem "rails",           "7.0.4"
+gem "propshaft"
+gem "jsbundling-rails"
+gem "cssbundling-rails"
 gem "bcrypt",          "3.1.18"
 gem "faker",           "2.21.0"
 gem "will_paginate",           "3.3.1"
