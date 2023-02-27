@@ -32,7 +32,7 @@ class TasksController < ApplicationController
     def undone
         @task = Task.find(params[:id])
         @task.update(is_done: false)
-        redirect_to user_path
+        redirect_to root_path, status: :see_other
     end
     
     private
