@@ -119,7 +119,7 @@
 
 "@hotwired/turbo-rails@^7.2.5":
   version "7.2.5"
-  resolved "https://registry.npmjs.org/@hotwired/turbo-rails/-/turbo-rails-7.2.5.tgz"
+  resolved "https://registry.yarnpkg.com/@hotwired/turbo-rails/-/turbo-rails-7.2.5.tgz#74fc3395a29a76df2bb8835aa88c86885cffde4c"
   integrity sha512-F8ztmARxd/XBdevRa//HoJGZ7u+Unb0J7cQUeUP+pBvt9Ta2TJJ7a2TORAOhjC8Zgxx+LKwm/1UUHqN3ojjiGw==
   dependencies:
     "@hotwired/turbo" "^7.2.5"
