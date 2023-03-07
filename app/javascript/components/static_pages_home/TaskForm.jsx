@@ -1,7 +1,8 @@
 import React from "react";
 
 export const TaskForm = () => {
-    render(
+    return(
+        <div>Task Form is coming here</div>
     //     <%= form_with(model: @task) do |f| %>
     //     <%= render 'shared/error_messages', object: f.object %>
     //     <div class="field">
@@ -27,5 +28,5 @@ export const TaskForm = () => {
     
     //     <%= f.submit "Create Task", class: "btn btn-primary" %>
     // <% end %>
-    )
-}
+    );
+};

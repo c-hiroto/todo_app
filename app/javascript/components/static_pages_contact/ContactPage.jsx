@@ -1,8 +1,7 @@
 import React from "react";
-import { render } from "react-dom";
 
 export const ContactPage = () => {
-    render(
+    return(
     <>
         <h1>Contact</h1>
         <p>
@@ -10,5 +9,5 @@ export const ContactPage = () => {
             <a href="#">contact page</a>.
         </p>
     </>    
-    )
-}
+    );
+};

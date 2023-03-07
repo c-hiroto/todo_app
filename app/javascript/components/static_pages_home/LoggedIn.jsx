@@ -1,10 +1,9 @@
 import React from "react";
-import { render } from "react-dom";
 import { TaskForm } from "./TaskForm";
 import { UserInfo } from "./UserInfo";
 
 export const LoggedIn = () => {
-    render(
+    return(
       <div class="row">
         <aside class="col-md-4">
           <section class="user_info">
