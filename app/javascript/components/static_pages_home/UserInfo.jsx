@@ -1,12 +1,11 @@
 import React from "react";
 
-export const UserInfo = () => {
+export const UserInfo = (props) => {
     return(
       <section class="user_info">
-        <div>User Info</div>
-        {/* <h1><%= current_user.name %></h1>
-        <span><%= link_to "View Completed tasks", current_user %></span>
-        <span><%= pluralize(current_user.tasks.count, "task") %></span> */}
+        <h1>{props.user}(ユーザー名の表示をしたい)</h1>
+        <span><a href="#">View Completed tasks</a></span>
+        <span>The number of upcoming Tasks(未完了タスクの個数を表示したい)</span>
       </section>
     )
 }
