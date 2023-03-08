@@ -25,14 +25,14 @@ class TasksController < ApplicationController
 
     def done
         @task = Task.find(params[:id])
-        @task.update(state: true)
+        @task.update(is_done: true)
         redirect_to root_path, status: :see_other
     end
 
     def undone
         @task = Task.find(params[:id])
-        @task.update(state: false)
-        redirect_to user_path
+        @task.update(is_done: false)
+        redirect_to root_path, status: :see_other
     end
     
     private
