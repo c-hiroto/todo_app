@@ -1,4 +1,5 @@
 import React from "react";
+import { SignupButton } from "./SignupButton";
 
 export const NotLoggedIn = () => {
     return(
@@ -7,6 +8,7 @@ export const NotLoggedIn = () => {
       <h2>
           これは勉強用のToDoアプリです。
       </h2>
+      <SignupButton />
     </div>
     );
 };
